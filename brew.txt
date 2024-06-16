@@ -5,6 +5,7 @@ libevent
 libtermkey
 libuv
 libvterm
+lpeg
 luajit
 luv
 mpdecimal
@@ -23,3 +24,4 @@ unibilium
 utf8proc
 xz
 amethyst
+sf

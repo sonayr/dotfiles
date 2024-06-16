@@ -5,3 +5,7 @@
 
 # install  brew apps
 xargs brew install < ./brew.txt
+
+stow . -t ~/
+
+

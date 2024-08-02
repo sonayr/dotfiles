@@ -73,10 +73,14 @@ ZSH_THEME="cloud"
 plugins=(git wd)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/salesforceShellCmds.sh
 
 alias python=python3
 alias pip=pip3
+
 # User configuration
+bindkey "[D" backward-word
+bindkey "[C" forward-word
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

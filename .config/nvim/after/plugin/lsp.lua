@@ -40,6 +40,7 @@ local lspconfig = require'lspconfig'
 lspconfig.apex_ls.setup {
     apex_enable_semantic_errors = false,
     apex_enable_completion_statistics = false,
+    apex_jar_path = vim.env.HOME .. '/apex-jorje-lsp.jar',
     filetypes = { 'apex' },
     root_dir = lspconfig.util.root_pattern('sfdx-project.json'),
 

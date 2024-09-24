@@ -1,5 +1,5 @@
 
-alias nesto="sfdx org:open --target-org ryan@nesto.ca"
+alias nesto="sf org open --target-org ryan@nesto.ca -p /"
 alias staging="sfdx org:open --target-org ryan@nesto.ca.staging"
 alias staging2="sfdx org:open --target-org ryan@nesto.ca.staging2"
 alias demo="sfdx org:open --target-org ryan@nesto.ca.migration"

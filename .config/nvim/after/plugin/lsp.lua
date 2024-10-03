@@ -5,6 +5,7 @@ lsp.setup_servers({
     'lua_ls',
     'eslint',
     'tsserver',
+    'gopls',
 })
 
 

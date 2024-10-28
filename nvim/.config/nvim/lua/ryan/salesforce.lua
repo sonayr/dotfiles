@@ -11,13 +11,22 @@ vim.api.nvim_create_user_command('SFOpen',
 vim.api.nvim_create_user_command('SFDeleteFile',
     function ()
        local dir = vim.fn.expand('%')
-       if string.find(dir,'/flow/') then
-          -- This is a flow, ensure it's deactivated and then delete all versions
-          vim.system('deactivateFlows',dir,{},function()
-              vim.system('deleteFlows',dir)
-          end)
+       local stdout = function(err,data)
+           if err then
+               print(err)
+           else
+               print(data)
+           end
        end
-
+       if string.find(dir,'/flows/') then
+          local deleteFlows = function ()
+              vim.system({'deleteFlows.sh',dir},{stdout = stdout, stderr = stdout})
+          end
+          -- This is a flow, ensure it's deactivated and then delete all versions
+          print('Flow found, deactivating then deleting')
+          vim.system({'deactivateFlows.sh',dir},{stdout = stdout, stderr = stdout},deleteFlows)
+       end
+       print(dir)
     end,
     {}
 )

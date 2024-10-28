@@ -73,7 +73,8 @@ ZSH_THEME="cloud"
 plugins=(git wd)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/salesforceShellCmds.sh
+source $HOME/.zsh_salesforceShellCmds
+source $HOME/.zsh_defaults
 
 alias python=python3
 alias pip=pip3

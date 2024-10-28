@@ -6,7 +6,12 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 require('telescope').setup{
 	defaults = {
 		path_display={"truncate"} 
-	}
+	},
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    }
 }
 return {
 	'nvim-telescope/telescope.nvim',

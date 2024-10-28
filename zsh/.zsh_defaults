@@ -5,4 +5,4 @@ addToPath() {
 }
 
 
-addToPath ./local/bin/
+addToPath $HOME/.local/bin

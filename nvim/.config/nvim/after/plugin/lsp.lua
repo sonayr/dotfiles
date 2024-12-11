@@ -4,7 +4,7 @@ lsp.preset("recommended")
 lsp.setup_servers({
     'lua_ls',
     'eslint',
-    'tsserver',
+    'ts_ls',
     'gopls',
 })
 

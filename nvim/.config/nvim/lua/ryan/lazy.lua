@@ -41,7 +41,15 @@ require('lazy').setup({
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
     {'nvim-lualine/lualine.nvim'},
-    {'folke/which-key.nvim'}
+    {'folke/which-key.nvim'},
+    {
+        "jonathanmorris180/salesforce.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        }
+    }
+
 
 })
 

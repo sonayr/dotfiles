@@ -17,7 +17,7 @@ local mapOutput = {stdout = stdout, stderr = stdout}
 vim.api.nvim_create_user_command('SFOpen',
     function ()
        local dir = vim.fn.expand('%')
-       vim.system({'sf','org','open','-f',dir,},mapOutput)
+       vim.system({'sf','org','open','--browser','chrome','--source-file',dir,},mapOutput)
     end,
     {}
 )

@@ -29,7 +29,7 @@ vim.keymap.set('n', '<leader>fo', function()
 end)
 vim.keymap.set('n','<leader>so', function()
     vim.cmd("so")
-end, {desc = 'Source init.lua'})
+end, {desc = 'Source current file'})
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })

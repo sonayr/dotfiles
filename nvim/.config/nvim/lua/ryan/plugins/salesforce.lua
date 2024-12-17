@@ -1,4 +1,9 @@
-require("salesforce").setup({
+return {
+    "jonathanmorris180/salesforce.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+    },
     debug = {
         to_file = false, -- Can also be toggled with :SalesforceToggleLogFileDebug
         to_command_line = false, -- Can also be toggled with :SalesforceToggleCommandLineDebug
@@ -17,4 +22,4 @@ require("salesforce").setup({
     org_manager = {
         default_org_indicator = "󰄬",
     },
-})
+}

@@ -75,6 +75,29 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
         }
+        vim.api.nvim_create_autocmd("LspAttach", {
+            callback = function(args)
+              local bufnr = args.buf
+              local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
+
+              local builtin = require "telescope.builtin"
+
+              vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
+              vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 ,desc = 'Go to Symbol Defintion'})
+              vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = 0,desc = 'Symbol References' })
+              vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
+              vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
+              vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+
+              vim.keymap.set("n", "<space>cr", vim.lsp.buf.rename, { buffer = 0 })
+              vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
+              vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
+
+              local filetype = vim.bo[bufnr].filetype
+
+              -- Override server capabilities
+            end,
+          })
         require('mason-lspconfig').setup({
             handlers = {
                 function(server_name)

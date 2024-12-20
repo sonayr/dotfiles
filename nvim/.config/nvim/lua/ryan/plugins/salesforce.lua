@@ -22,4 +22,5 @@ return {
     org_manager = {
         default_org_indicator = "󰄬",
     },
+    lazy = false,
 }

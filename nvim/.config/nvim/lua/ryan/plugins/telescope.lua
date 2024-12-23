@@ -11,6 +11,14 @@ return {
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+        vim.keymap.set('n', '<leader>en', function ()
+            builtin.find_files({
+                cwd = vim.fn.stdpath("config"),
+                follow  = true,
+                hidden = false,
+            })
+        end, {desc = 'Edit neovim config'})
+
         require('telescope').setup{
             defaults = {
                 path_display={"truncate"} 

@@ -26,8 +26,16 @@ function mirrorProd(){
     sf project deploy start --target-org qa2 -m $1 -c $@
     sf project deploy start --target-org demo -m $1 -c $@
 }
+
 function query(){
-    sf data query -o $1 -q $2 $3 $4 $5
+    if [[ ${1:l} == select* ]] 
+    then
+        2=$1
+        1=""
+    else 
+        1="-o $1"
+    fi
+    sf data query $1 -q $2 $3 $4 $5
 }
 
 function runTest(){

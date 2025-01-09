@@ -19,7 +19,7 @@ ls.add_snippets("apex", {
         Description:{}
         Created:{}
         ******************************************************************************/
-        ]],{i(1,'Ryan O\'Sullivan'),i(2),i(3),os.date('%Y-%M-%d')}
+        ]],{i(1,'Ryan O\'Sullivan'),i(2),i(3),os.date('%Y-%m-%d')}
     )),
     s({
         trig = 'fori',

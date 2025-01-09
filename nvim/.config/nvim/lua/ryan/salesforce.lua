@@ -2,6 +2,7 @@
 -- vim.keymap.set('n', '<leader>ga', ':silent !sf apex generate class -d  fh 
 vim.keymap.set('n', '<leader>sfo', ':SFOpen<CR>',{desc = 'Open current file in default org'})
 vim.keymap.set('n', '<leader>sfd', ':SalesforcePushToOrg<CR>',{desc = 'Deploy current file to default org'})
+vim.keymap.set('n', '<leader>sfp', ':SalesforceRetrieveFromOrg<CR>',{desc = 'Retrieve current file from default org'})
 vim.keymap.set('n', '<leader>sfa', ':SalesforceCreateApex<CR>',{desc = 'Create a new apex class'})
 vim.keymap.set('n', '<leader>sfrt', ':SalesforceExecuteCurrentClass<CR>',{desc = 'Run current test class'})
 vim.keymap.set('n', '<leader>sfrm', ':SalesforceExecuteCurrentMethod<CR>',{desc = 'Run current test method'})

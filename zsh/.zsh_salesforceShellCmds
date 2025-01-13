@@ -33,7 +33,7 @@ function query(){
         2=$1
         1=""
     else 
-        1="-o $1"
+        1="-o"$1
     fi
     sf data query $1 -q $2 $3 $4 $5
 }

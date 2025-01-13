@@ -75,6 +75,7 @@ plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_salesforceShellCmds
 source $HOME/.zsh_defaults
+source $HOME/.zsh_gitCmds
 
 alias python=python3
 alias pip=pip3

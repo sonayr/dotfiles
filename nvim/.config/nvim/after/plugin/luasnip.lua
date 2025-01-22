@@ -63,5 +63,25 @@ ls.add_snippets("apex", {
         {
             indent_string = '\\'
         }
+    )),
+    s({
+        trig = 'testMeth',
+        desc = 'Starts aTest method for ApexTest',
+        name = 'Apex Test Method'
+    },
+    fmt(
+        [[
+        @isTest
+        private static void {t}(){{
+        \{o}
+        }}
+        ]],
+        {
+            t = i(1,'default_test_name'),
+            o = i(0),
+        },
+        {
+            indent_string = '\\'
+        }
     ))
 })

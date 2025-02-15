@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>sfp', ':SalesforceRetrieveFromOrg<CR>',{desc = 'Ret
 vim.keymap.set('n', '<leader>sfa', ':SalesforceCreateApex<CR>',{desc = 'Create a new apex class'})
 vim.keymap.set('n', '<leader>sfrt', ':SalesforceExecuteCurrentClass<CR>',{desc = 'Run current test class'})
 vim.keymap.set('n', '<leader>sfrm', ':SalesforceExecuteCurrentMethod<CR>',{desc = 'Run current test method'})
+vim.keymap.set('n', '<leader>sfso', ':SalesforceSetDefaultOrg<CR>',{desc = 'Set default Salesforce org'})
 local stdout = function(err,data)
    if err then
        print(err)

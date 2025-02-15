@@ -2,6 +2,8 @@ local ls = require "luasnip"
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+local c = ls.choice_node
+local sn = ls.snippet_node
 local fmt = require('luasnip.extras.fmt').fmt
 local rep = require('luasnip.extras').rep
 
@@ -83,5 +85,27 @@ ls.add_snippets("apex", {
         {
             indent_string = '\\'
         }
-    ))
+    )),
+    s({
+            trig = 'list',
+            desc = 'Intiates a list in apex',
+            name = 'New List'
+    },
+    fmt(
+        [[
+        List<{o}> {n} = new List<{o}>{c};
+        ]],
+                {
+                    n = i(2,'accountList'),
+                    o = i(1,'Account'),
+                    c = c(3,{
+                        t("()"),
+                        sn(nil, {t("{"),i(1), t("}")})
+                    })
+                },
+                {
+                    indent_string = '\\'
+                }
+        ))
+
 })

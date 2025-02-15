@@ -4,9 +4,13 @@ vim.keymap.set('n', '<leader>sfo', ':SFOpen<CR>',{desc = 'Open current file in d
 vim.keymap.set('n', '<leader>sfd', ':SalesforcePushToOrg<CR>',{desc = 'Deploy current file to default org'})
 vim.keymap.set('n', '<leader>sfp', ':SalesforceRetrieveFromOrg<CR>',{desc = 'Retrieve current file from default org'})
 vim.keymap.set('n', '<leader>sfa', ':SalesforceCreateApex<CR>',{desc = 'Create a new apex class'})
+vim.keymap.set('n', '<leader>sfl', ':SalesforceCreateLightningComponent<CR>',{desc = 'Create a new Lightning Component'})
 vim.keymap.set('n', '<leader>sfrt', ':SalesforceExecuteCurrentClass<CR>',{desc = 'Run current test class'})
 vim.keymap.set('n', '<leader>sfrm', ':SalesforceExecuteCurrentMethod<CR>',{desc = 'Run current test method'})
+vim.keymap.set('n', '<leader>sfrf', ':SalesforceExecuteFile<CR>',{desc = 'Run current anonymous apex'})
 vim.keymap.set('n', '<leader>sfso', ':SalesforceSetDefaultOrg<CR>',{desc = 'Set default Salesforce org'})
+
+
 local stdout = function(err,data)
    if err then
        print(err)

@@ -27,6 +27,21 @@ function mirrorProd(){
     sf project deploy start --target-org demo -m $1 -c $@
 }
 
+function retrieve(){
+    sf project retrieve start "$@"
+}
+
+function org(){
+    if [ -z "$1" ] 
+    then
+        1=""
+    else
+        1="-o"$1
+    fi
+
+    sf org open -b chrome $1
+}
+
 function query(){
     if [[ ${1:l} == select* ]] 
     then

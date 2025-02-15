@@ -10,6 +10,8 @@
 	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>5AC00648-618F-455A-9668-E8253A719505</string>
+	<key>FocusFollowsMouse</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -692,6 +694,8 @@
 	</dict>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TmuxUsesDedicatedProfile</key>

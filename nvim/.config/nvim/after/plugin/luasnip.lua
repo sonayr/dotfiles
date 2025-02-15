@@ -68,7 +68,7 @@ ls.add_snippets("apex", {
     )),
     s({
         trig = 'testMeth',
-        desc = 'Starts aTest method for ApexTest',
+        desc = 'Starts a Test method for ApexTest',
         name = 'Apex Test Method'
     },
     fmt(
@@ -106,6 +106,30 @@ ls.add_snippets("apex", {
                 {
                     indent_string = '\\'
                 }
-        ))
-
+    )),
+    s({
+        trig = 'soql',
+        desc = 'Starts a query in apex',
+        name = 'Apex SOQL'
+    },
+    fmt(
+        [[
+        [
+        \SELECT Id,
+        \{f}
+        \FROM {o}
+        \{w} {c}
+        ];{e}
+        ]],
+        {
+            f = i(1),
+            o = i(2,'Account'),
+            w = i(3,'WHERE'),
+            c = i(4),
+            e = i(0)
+        },
+        {
+            indent_string = '\\'
+        }
+    ))
 })

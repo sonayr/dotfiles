@@ -5,7 +5,7 @@
 # install  brew apps
 # xargs brew install < ./brew.txt
 
-STOW_PACKAGES=("nvim" "zsh" "scripts" "LSP" "tmux" "iterm")
+STOW_PACKAGES=("nvim" "zsh" "scripts" "LSP" "tmux" "iterm" "aerospace")
 for folder in ${STOW_PACKAGES[@]}; do
     echo "stowing package $folder"
     stow -t $HOME -D $folder

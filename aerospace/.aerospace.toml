@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -67,8 +67,8 @@ automatically-unhide-macos-hidden-apps = false
 [workspace-to-monitor-force-assignment]
     1 = 'main' #browser                            # Monitor sequence number from left to right. 1-based indexing
     2 = 'main' #2nd browser/email
-    3 = 'secondary' #slack
-    4 = 'main' # 
+    3 = 'main' #slack
+    4 = 'secondary' #slack
     5 = 'secondary'
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

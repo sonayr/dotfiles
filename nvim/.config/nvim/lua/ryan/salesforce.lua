@@ -1,5 +1,6 @@
 -- vim.keymap.set('n', '<leader>ga', ':silent !sf apex generate class -d  fh 
 -- vim.keymap.set('n', '<leader>ga', ':silent !sf apex generate class -d  fh 
+defaultBrowser = 'firefox';
 vim.keymap.set('n', '<leader>sfo', ':SFOpen<CR>',{desc = 'Open current file in default org'})
 vim.keymap.set('n', '<leader>sfd', ':SalesforcePushToOrg<CR>',{desc = 'Deploy current file to default org'})
 vim.keymap.set('n', '<leader>sfp', ':SalesforceRetrieveFromOrg<CR>',{desc = 'Retrieve current file from default org'})
@@ -23,7 +24,7 @@ local mapOutput = {stdout = stdout, stderr = stdout}
 vim.api.nvim_create_user_command('SFOpen',
     function ()
        local dir = vim.fn.expand('%')
-       vim.system({'sf','org','open','--browser','chrome','--source-file',dir,},mapOutput)
+       vim.system({'sf','org','open','--browser',defaultBrowser,'--source-file',dir,},mapOutput)
     end,
     {}
 )

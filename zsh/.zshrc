@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,11 +71,11 @@ ZSH_THEME="cloud"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git wd)
-
+if [ -z $ZDOTDIR ]; then $ZDOTDIR=$HOME; fi
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh_salesforceShellCmds
-source $HOME/.zsh_defaults
-source $HOME/.zsh_gitCmds
+source $ZDOTDIR/.zsh_salesforceShellCmds
+source $ZDOTDIR/.zsh_defaults
+source $ZDOTDIR/.zsh_gitCmds
 
 alias python=python3
 alias pip=pip3

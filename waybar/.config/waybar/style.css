@@ -5,33 +5,10 @@
  * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
  *
  * =========================================================================== */
-
+@import url("Styles/battery.css");
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
-
-@keyframes blink-warning {
-    70% {
-        color: white;
-    }
-
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: white;
-    }
-
-    to {
-        color: white;
-        background-color: red;
-    }
-}
-
 
 /* -----------------------------------------------------------------------------
  * Base styles
@@ -50,7 +27,7 @@
 #waybar {
     background: #323232;
     color: white;
-    font-family: Cantarell, Noto Sans, sans-serif;
+    font-family: Cantarell, Noto Sans, sans-serif,"Font Awesome 6 Solid Free";
     font-size: 13px;
 }
 
@@ -74,29 +51,8 @@
  * Module styles
  * -------------------------------------------------------------------------- */
 
-#battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
-#battery.warning {
-    color: orange;
-}
 
-#battery.critical {
-    color: red;
-}
-
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
-}
-
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
 
 #clock {
     font-weight: bold;

@@ -19,11 +19,11 @@
     "height": 30,
 
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/mode"
+        "battery"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces",
+        "hyprland/mode"
     ],
     "modules-right": [
         "network",
@@ -31,7 +31,6 @@
         "cpu",
         "temperature",
         "custom/keyboard-layout",
-        "battery",
         "tray",
         "clock#date",
         "clock#time"
@@ -45,20 +44,16 @@
     "battery": {
         "interval": 10,
         "states": {
-            "warning": 30,
-            "critical": 15
+            "full":100,
+            "five-sixth":83,
+            "two-third":66,
+            "half":50,
+            "third":33,
+            "sixth": 16
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
-        // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
-        "format-icons": [
-            "", // Icon: battery-full
-            "", // Icon: battery-three-quarters
-            "", // Icon: battery-half
-            "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
-        ],
+        "format": "                            ", // Icon: bolt
+        "tooltip-format":"{capacity}% - {timeTo}",
         "tooltip": true
     },
 
@@ -135,23 +130,6 @@
             "default": ""
         }
     },
-
-    //"pulseaudio": {
-    //    //"scroll-step": 1,
-    //    "format": "{icon}  {volume}%",
-    //    "format-bluetooth": "{icon}  {volume}%",
-    //    "format-muted": "",
-    //    "format-icons": {
-    //        "headphones": "",
-    //        "handsfree": "",
-    //        "headset": "",
-    //        "phone": "",
-    //        "portable": "",
-    //        "car": "",
-    //        "default": ["", ""]
-    //    },
-    //    "on-click": "pavucontrol"
-    //},
 
     "temperature": {
       "critical-threshold": 80,

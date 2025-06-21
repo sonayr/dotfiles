@@ -1,0 +1,178 @@
+@keyframes blink-warning {
+    70% {
+        background-color: red;
+    }
+
+    to {
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        background-color: white;
+    }
+
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes full {
+    to {
+        background-image:url("../Assets/Full-Hearts.png");
+    }
+}
+
+@keyframes full-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-charging.png");
+    }
+}
+
+@keyframes full-1 {
+    to {
+        background-image:url("../Assets/Full-Hearts-1.png");
+    }
+}
+
+@keyframes full-1-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-1-Charging.png");
+    }
+}
+
+@keyframes full-2 {
+    to {
+        background-image:url("../Assets/Full-Hearts-2.png");
+    }
+}
+
+@keyframes full-2-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-2-Charging.png");
+    }
+}
+
+@keyframes full-3 {
+    to {
+        background-image:url("../Assets/Full-Hearts-3.png");
+    }
+}
+
+@keyframes full-3-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-3-Charging.png");
+    }
+}
+
+@keyframes full-4 {
+    to {
+        background-image:url("../Assets/Full-Hearts-4.png");
+    }
+}
+
+@keyframes full-4-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-4-Charging.png");
+    }
+}
+
+@keyframes full-5 {
+    to {
+        background-image:url("../Assets/Full-Hearts-5.png");
+    }
+}
+
+@keyframes full-5-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-5-Charging.png");
+    }
+}
+
+@keyframes full-6 {
+    to {
+        background-image:url("../Assets/Full-Hearts-6.png");
+    }
+}
+
+@keyframes full-6-charging {
+    to {
+        background-image:url("../Assets/Full-Hearts-6-Charging.png");
+    }
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    color:red;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#battery.discharging.full {
+    background-image:url("../Assets/Full-Hearts.png");
+    animation-name: full;
+}
+
+#battery.full {
+    background-image:url("../Assets/Full-Hearts-Charging.png");
+    animation-name: full-charging;
+}
+
+#battery.discharging.five-sixth {
+    background-image:url("../Assets/Full-Hearts-1.png");
+    animation-name: full-1;
+}
+
+#battery.five-sixth {
+    background-image:url("../Assets/Full-Hearts-1-Charging.png");
+    animation-name: full-1-charging;
+}
+
+#battery.discharging.two-third {
+    background-image:url("../Assets/Full-Hearts-2.png");
+    animation-name: full-2;
+}
+
+#battery.two-third {
+    background-image:url("../Assets/Full-Hearts-2-Charging.png");
+    animation-name: full-2-charging;
+}
+
+#battery.discharging.half {
+    background-image:url("../Assets/Full-Hearts-3.png");
+    animation-name: full-3;
+}
+
+#battery.half {
+    background-image:url("../Assets/Full-Hearts-3-Charging.png");
+    animation-name: full-3-charging;
+}
+
+#battery.discharging.third {
+    background-image:url("../Assets/Full-Hearts-4.png");
+    animation-name: full-4;
+}
+
+#battery.third {
+    background-image:url("../Assets/Full-Hearts-4-Charging.png");
+    animation-name: full-4-charging;
+}
+
+#battery.discharging.sixth {
+    background-image:url("../Assets/Full-Hearts-5.png");
+    animation-name: full-5;
+}
+
+#battery.sixth {
+    background-image:url("../Assets/Full-Hearts-5-Charging.png");
+    animation-name: full-5-charging;
+}
+
+/*#battery.discharging.sixth {*/
+/*    animation-name: blink-warning;*/
+/*    animation-duration: 3s;*/
+/*    animation-iteration-count: infinite;*/
+/*}*/

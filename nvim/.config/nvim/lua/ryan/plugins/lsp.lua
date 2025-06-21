@@ -48,6 +48,7 @@ return {
         --     })
         -- end)
         require('mason').setup({})
+
         -- setup Salesforce lsp
         vim.filetype.add({
             extension = {
@@ -75,6 +76,7 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
         }
+        lspconfig.rnix.setup {}
         vim.api.nvim_create_autocmd("LspAttach", {
             callback = function(args)
               local bufnr = args.buf

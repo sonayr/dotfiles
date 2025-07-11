@@ -6,6 +6,7 @@
  *
  * =========================================================================== */
 @import url("Styles/battery.css");
+@import url("Styles/memory.css");
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
@@ -70,21 +71,6 @@
     color: red;
 }
 
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#memory.warning {
-    color: orange;
-}
-
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
 
 #mode {
     background: #64727D;
@@ -95,6 +81,9 @@
 
 #network {
     /* No styles */
+    background: url("Assets/AButton.png");
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 #network.disconnected {

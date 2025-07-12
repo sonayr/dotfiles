@@ -1,0 +1,17 @@
+#bluetooth {
+    background: url("../Assets/BButton.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    padding: 10px;
+    /* margin-left:5px; */
+    font-size:16px;
+}
+#bluetooth.off {
+    color:red;
+}
+#bluetooth.connected {
+    color:green;
+}
+
+

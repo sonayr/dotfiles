@@ -29,7 +29,7 @@
     ],
     "modules-right": [
         "network",
-        "tray",
+        "bluetooth"
     ],
 
 
@@ -92,7 +92,16 @@
         "format-wifi": "    ", // Icon: wifi
         "format-ethernet": "   ", // Icon: ethernet
         "format-disconnected": "⚠   ",
+        "on-click":"hyprctl dispatch exec '[float] ghostty -e nmtui'"
+        ,
         "tooltip-format": "{essid}: {ipaddr}"
+    },
+
+    "bluetooth": {
+        "interval":5,
+        "on-click":"hyprctl dispatch exec '[float;size 50% 50%] blueman-manager'",
+        "controller":"blueman-tray",
+        "format-on":"  ",
     },
 
     "sway/mode": {

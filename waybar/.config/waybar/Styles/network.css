@@ -1,0 +1,13 @@
+#network {
+    /* No styles */
+    background: url("../Assets/AButton.png");
+    background-size: 1.8em;
+    background-repeat:no-repeat;
+    background-position:center;
+    font-size:1.7em;
+    color:gold;
+}
+
+#network.disconnected {
+    color: red;
+}

@@ -1,8 +1,10 @@
 #memory {
     background-image: url("../Assets/Magic_Bar.png"), linear-gradient(#00C800,#00C800);
-    background-size:100%,100% 80%;
+    background-size:100%,100% 70%;
     background-repeat:no-repeat,no-repeat;
-    margin-top:4px;
+    background-position:center,left;
+    margin-top:0.7em;
+    margin-bottom:0.7em;
 }
 #memory.90 {
     background-size:100%,10% 80%;

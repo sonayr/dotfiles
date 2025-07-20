@@ -1,0 +1,28 @@
+#custom-leftC, #custom-downC, #custom-rightC{
+    background-size: 1.5em;
+    background-repeat:no-repeat;
+    background-position:center;
+    padding-left: 16px;
+    padding-right: 29px;
+    font-size:2.0em;
+    color:#0F9EDD;
+    font-weight:600;
+}
+#custom-leftC{
+    background-image: url("../Assets/cButton.png");
+    background-size:1.25em;
+    padding-bottom:4px;
+    padding-left:18px;
+}
+#custom-downC{
+    background-image: url("../Assets/cLeftButton.png");
+    /* margin-top:10px; */
+    margin-left:-38px;
+    margin-right:-30px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+#custom-rightC{
+    background-image: url("../Assets/cLeftButton.png");
+    margin-left:-23px;
+}

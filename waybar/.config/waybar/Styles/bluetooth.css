@@ -1,11 +1,15 @@
 #bluetooth {
     background: url("../Assets/BButton.png");
-    background-size: cover;
+    background-size: 1.9em;
     background-repeat:no-repeat;
     background-position:center;
-    padding: 10px;
-    /* margin-left:5px; */
-    font-size:16px;
+    /* padding: 10px; */
+    padding-right: 18px;
+    padding-left: 15px;
+    margin-left: 3px;
+    margin-right: 50px;
+    /* margin-left:10px; */
+    font-size:1.8em;
 }
 #bluetooth.off {
     color:red;

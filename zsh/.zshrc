@@ -71,11 +71,11 @@ ZSH_THEME="cloud"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git wd)
-if [ -z $ZDOTDIR ]; then $ZDOTDIR=$HOME; fi
+# if [ -z $ZDOTDIR ]; then $ZDOTDIR=$HOME; fi
 source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/.zsh_salesforceShellCmds
-source $ZDOTDIR/.zsh_defaults
-source $ZDOTDIR/.zsh_gitCmds
+source $HOME/.zsh_salesforceShellCmds
+source $HOME/.zsh_defaults
+source $HOME/.zsh_gitCmds
 
 alias python=python3
 alias pip=pip3

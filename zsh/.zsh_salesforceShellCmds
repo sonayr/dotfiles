@@ -31,6 +31,10 @@ function retrieve(){
     sf project retrieve start "$@"
 }
 
+function deploy(){
+    sf project deploy start "$@"
+}
+
 function org(){
     if [ -z "$1" ] 
     then

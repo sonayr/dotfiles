@@ -46,6 +46,16 @@ function org(){
     sf org open -b chrome $1
 }
 
+function devConsole(){
+    if [ -z "$1" ] 
+    then
+        1=""
+    else
+        1="-o"$1
+    fi
+    sf org open -b chrome -p "_ui/common/apex/debug/ApexCSIPage" $1 
+}
+
 function query(){
     if [[ ${1:l} == select* ]] 
     then

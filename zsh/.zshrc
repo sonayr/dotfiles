@@ -72,7 +72,7 @@ ZSH_THEME="cloud"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git wd)
 # if [ -z $ZDOTDIR ]; then $ZDOTDIR=$HOME; fi
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 source $HOME/.zsh_salesforceShellCmds
 source $HOME/.zsh_defaults
 source $HOME/.zsh_gitCmds

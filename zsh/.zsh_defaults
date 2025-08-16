@@ -5,5 +5,5 @@ addToPath() {
 }
 
 
-addToPath $HOME/.local/bin
-addToPath /usr/local/bin
+addToPath "$HOME/.local/bin"
+addToPath "/usr/local/bin"

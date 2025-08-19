@@ -1,6 +1,6 @@
 -- vim.keymap.set('n', '<leader>ga', ':silent !sf apex generate class -d  fh 
 -- vim.keymap.set('n', '<leader>ga', ':silent !sf apex generate class -d  fh 
-defaultBrowser = 'firefox';
+defaultBrowser = 'chrome';
 vim.keymap.set('n', '<leader>sfo', ':SFOpen<CR>',{desc = 'Open current file in default org'})
 vim.keymap.set('n', '<leader>sfd', ':SalesforcePushToOrg<CR>',{desc = 'Deploy current file to default org'})
 vim.keymap.set('n', '<leader>sfp', ':SalesforceRetrieveFromOrg<CR>',{desc = 'Retrieve current file from default org'})

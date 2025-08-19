@@ -30,7 +30,7 @@ ls.add_snippets("apex", {
     },
     fmt(
         [[
-        for( Integer {i} = 0 ; {i} {l} {c}, {i}++){{
+        for( Integer {i} = 0 ; {i} {l} {c}; {i}++){{
         \{o}
         }}
         ]], 

@@ -14,7 +14,7 @@ if [ -z "$3" ]; then
     exit 1
 fi
 echo "getting starting count"
-count=$(sf data query -o $1 -f $3 -w 50 --json | jq '.result.records[0].expr0')
+count=$(sf data query -o $1 -q "$3" --json | jq '.result.records[0].expr0')
 echo $count
 
 re='^[0-9]+$'
@@ -33,6 +33,6 @@ do
         exit 1
     fi
     echo "recounting"
-    count=$(sf data query -o $1 -f $3 --json | jq '.result.records[0].expr0')
+    count=$(sf data query -o $1 -q "$3" --json | jq '.result.records[0].expr0')
     echo $count
 done

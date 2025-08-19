@@ -18,7 +18,6 @@ alias deployDemo="SF_DISABLE_SOURCE_MEMBER_POLLING=true; sf project deploy start
 alias deleteStaging="sf project delete source --target-org staging2 -m"
 alias deleteDemo="sf project delete source --target-org demo -m"
 alias deleteQA="sf project delete source --target-org qa2 -m"
-alias consultPage="sf org open -o staging2 -p lightning/n/Consultant_Managment"
 
 function mirrorProd(){
     sf project retrieve start --target-org nesto -m $1 $@
@@ -31,7 +30,7 @@ function retrieve(){
     sf project retrieve start "$@"
 }
 
-function deploy(){
+function push(){
     sf project deploy start "$@"
 }
 
@@ -54,6 +53,16 @@ function devConsole(){
         1="-o"$1
     fi
     sf org open -b chrome -p "_ui/common/apex/debug/ApexCSIPage" $1 
+}
+
+function deploy(){
+    if [ -z "$1" ] 
+    then
+        1=""
+    else
+        1="-o"$1
+    fi
+    sf org open -b chrome -p "lightning/setup/DeployStatus/home" $1 
 }
 
 function query(){

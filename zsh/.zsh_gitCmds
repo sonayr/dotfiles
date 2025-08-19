@@ -3,8 +3,32 @@ function addWT (){
     # IFS='/' read -r split <<< "$1"
     split=(${(@s:/:)1})
     newpath=${split[-1]} 
+    git fetch
     git worktree add -B $1 $newpath
-    cd $newpath
+    tmux new-window -n $newpath -c $(realpath $newpath)
+    tmux send-keys 'git pull origin master && clear' c-M
 }
+
+
+function removeWT (){
+    GIT_DIR=$(git rev-parse --git-dir)
+    GIT_COMMON_DIR=$(git rev-parse --git-common-dir)
+
+    if [ "$GIT_DIR" != "$GIT_COMMON_DIR" ]; then
+      echo "Current directory is a Git worktree."
+    else
+      echo "Current directory is the main Git repository or not a worktree."
+      return 0;
+    fi
+    DIR=$(basename "$(pwd)") 
+    TMUX_WIN=$(tmux display-message -F '#W' -p)
+
+    git worktree remove .
+
+    if [ "$DIR" = "$TMUX_WIN" ]; then
+        tmux kill-window
+    fi
+}
+
 
 

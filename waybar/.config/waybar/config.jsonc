@@ -16,7 +16,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    // "height": 30,
 
     "modules-left": [
         "battery",
@@ -29,7 +29,10 @@
     ],
     "modules-right": [
         "network",
-        "bluetooth"
+        "bluetooth",
+        "custom/leftC",
+        "custom/downC",
+        "custom/rightC"
     ],
 
 
@@ -55,7 +58,7 @@
 
     "clock":{
         "interval": 1,
-        "format": " {:%H:%M:%S}",
+        "format": "  {:%H:%M:%S}",
         "tooltip": false
     },
 
@@ -89,9 +92,9 @@
 
     "network": {
         "interval": 20,
-        "format-wifi": "    ", // Icon: wifi
-        "format-ethernet": "   ", // Icon: ethernet
-        "format-disconnected": "⚠   ",
+        "format-wifi": " ", // Icon: wifi
+        "format-ethernet": "", // Icon: ethernet
+        "format-disconnected": " ",
         "on-click":"hyprctl dispatch exec '[float] ghostty -e nmtui'"
         ,
         "tooltip-format": "{essid}: {ipaddr}"
@@ -101,7 +104,7 @@
         "interval":5,
         "on-click":"hyprctl dispatch exec '[float;size 50% 50%] blueman-manager'",
         "controller":"blueman-tray",
-        "format-on":"  ",
+        "format":"",
     },
 
     "sway/mode": {
@@ -142,6 +145,20 @@
           ""  // Icon: temperature-full
       ],
       "tooltip": true
+    },
+    "custom/leftC": {
+        "format":"󰷠",
+        "return-type":"json",
+        "tooltip":false,
+        "on-click":"hyprctl dispatch exec '[float] ghostty --window-height=10 --window-width=80 --cursor-style-blink=false --cursor-style=block --cursor-opacity=0 -e ~/.config/waybar/Scripts/ocarina.sh'",
+    },
+    "custom/downC":{
+        "format":"     ",
+        "tooltip":false
+    },
+    "custom/rightC":{
+        "format":"     ",
+        "tooltip":false
     },
 
     "tray": {

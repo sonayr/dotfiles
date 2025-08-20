@@ -63,13 +63,18 @@ while true; do
         break
     elif [[ "$key" == "a" ]]; then
         notes="$notes ${note_map["a"]}"
+        aplay ~/.config/waybar/Sounds/D_short.wav -q &
     elif [[ "$key" == "h" ]]; then
+        aplay ~/.config/waybar/Sounds/F_short.wav -q &
         notes="$notes ${note_map["left"]}"
     elif [[ "$key" == "j" ]]; then
+        aplay ~/.config/waybar/Sounds/A_short.wav -q &
         notes="$notes ${note_map["down"]}"
     elif [[ "$key" == "k" ]]; then
+        aplay ~/.config/waybar/Sounds/B_short.wav -q &
         notes="$notes ${note_map["up"]}"
     elif [[ "$key" == "l" ]]; then
+        aplay ~/.config/waybar/Sounds/D2_short.wav -q &
         notes="$notes ${note_map["right"]}"
     elif [[ "$key" == $'\e' ]]; then
         read -rsn2 -t 0.1 key
@@ -81,10 +86,13 @@ while true; do
         esac
     fi
 
+
     # Trim notes
     notes_array=($notes)
-    if ((${#notes_array[@]} > max_notes)); then
-        notes="${notes_array[@]:1}"
+    if ((${#notes_array[@]} == max_notes)); then
+        // Shake screen then clear
+        notes="${notes_array[@]:max_notes}"
+        draw
     fi
 done
 

@@ -5,9 +5,7 @@
  * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
  *
  * =========================================================================== */
-@import url("Styles/battery.css");
-@import url("Styles/memory.css");
-@import url("Styles/bluetooth.css");
+
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
@@ -25,11 +23,17 @@
     padding: 0;
 }
 
+@import url("Styles/battery.css");
+@import url("Styles/memory.css");
+@import url("Styles/bluetooth.css");
+@import url("Styles/cbuttons.css");
+@import url("Styles/network.css");
+
 /* The whole bar */
 #waybar {
     background: #323232;
     color: white;
-    font-family: Cantarell, Noto Sans, sans-serif,"Font Awesome 6 Solid Free";
+    font-family: Cantarell, Noto Sans, sans-serif,"Nerd Font";
     font-size: 13px;
 }
 
@@ -44,17 +48,13 @@
 #pulseaudio,
 #temperature,
 #tray {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
-
 
 /* -----------------------------------------------------------------------------
  * Module styles
  * -------------------------------------------------------------------------- */
-
-
-
 
 #clock {
     font-weight: bold;
@@ -80,16 +80,6 @@
     padding-bottom: 2px;
 }
 
-#network {
-    /* No styles */
-    background: url("Assets/AButton.png");
-    background-size: cover;
-    background-repeat:no-repeat;
-}
-
-#network.disconnected {
-    color: orange;
-}
 
 #pulseaudio {
     /* No styles */

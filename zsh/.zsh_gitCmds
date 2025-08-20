@@ -7,6 +7,7 @@ function addWT (){
     git worktree add -B $1 $newpath
     tmux new-window -n $newpath -c $(realpath $newpath)
     tmux send-keys 'git pull origin master && clear' c-M
+    sf project tracking reset -p
 }
 
 

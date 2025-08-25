@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "jira": {
+      "type": "remote",
+      "url": "https://nestoca.atlassian.net",
+      "username": "ryan@nesto.ca",
+      "api_token": "your-api-token"
+      "enabled": true,
+    }
+  }
+}

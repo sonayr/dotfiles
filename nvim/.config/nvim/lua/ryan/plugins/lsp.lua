@@ -102,12 +102,12 @@ return {
               -- Override server capabilities
             end,
           })
-        require('mason-lspconfig').setup({
-            handlers = {
-                function(server_name)
-                    require('lspconfig')[server_name].setup({})
-                end,
-            },
-        })
+        -- require('mason-lspconfig').setup({
+        --     handlers = {
+        --         function(server_name)
+        --             require('lspconfig')[server_name].setup({})
+        --         end,
+        --     },
+        -- })
     end
 }

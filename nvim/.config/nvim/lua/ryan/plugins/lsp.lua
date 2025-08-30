@@ -76,7 +76,9 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
         }
-        lspconfig.rnix.setup {}
+        lspconfig.nil_ls.setup {
+            filetypes = {'nix'}
+        }
         vim.api.nvim_create_autocmd("LspAttach", {
             callback = function(args)
               local bufnr = args.buf

@@ -24,7 +24,7 @@ function removeWT (){
     DIR=$(basename "$(pwd)") 
     TMUX_WIN=$(tmux display-message -F '#W' -p)
 
-    git worktree remove .
+    git worktree remove . -f
 
     if [ "$DIR" = "$TMUX_WIN" ]; then
         tmux kill-window

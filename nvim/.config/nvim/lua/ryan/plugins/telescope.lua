@@ -18,6 +18,13 @@ return {
                 hidden = false,
             })
         end, {desc = 'Edit neovim config'})
+        vim.keymap.set('n', '<leader>edf', function ()
+            builtin.find_files({
+                cwd = '$HOME/dotfiles',
+                follow  = true,
+                hidden = true,
+            })
+        end, {desc = 'Edit dotfiles'})
 
         require('telescope').setup{
             defaults = {

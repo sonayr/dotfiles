@@ -6,6 +6,8 @@
 # xargs brew install < ./brew.txt
 
 STOW_PACKAGES=("nvim" "zsh" "scripts" "LSP" "tmux" "iterm" "aerospace" "opencode")
+# Create symlink for neovim search
+ln -h -f -s "$PWD" "$HOME/dotfiles"
 for folder in ${STOW_PACKAGES[@]}; do
     echo "stowing package $folder"
     stow -t $HOME -D $folder

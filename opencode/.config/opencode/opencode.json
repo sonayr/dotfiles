@@ -52,18 +52,23 @@
           "command": ["npx","-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"],
           "enabled": true
         },
+
         "salesforce-dx": {
-          "type": "local",
-          "command": ["npx","-y", "@salesforce/mcp",
+           "type": "local",
+           "command": ["npx","-y", "@salesforce/mcp",
               "--orgs", "ryanScratch",
               "--toolsets", "orgs,metadata,data,users",
               "--tools", "run_apex_test",
               "--allow-non-ga-tools"],
-          "enabled": true
+           "enabled": true
         },
         "granola": {
+           "type": "local",
+           "command": ["uvx","granola-mcp-server"]
+        },
+        "obsidian": {
           "type": "local",
-          "command": ["uvx","granola-mcp-server"]
+          "command": ["npx", "-y", "@mauricio.wolff/mcp-obsidian@latest", "/path/to/your/vault"]
         }
   },
   "permission": { "skill": {

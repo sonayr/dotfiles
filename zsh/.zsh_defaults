@@ -7,3 +7,5 @@ addToPath() {
 
 addToPath "$HOME/.local/bin"
 addToPath "/usr/local/bin"
+addToPath "$(go env GOPATH)/bin"
+addToPath "/Users/ryano/.opencode/bin"

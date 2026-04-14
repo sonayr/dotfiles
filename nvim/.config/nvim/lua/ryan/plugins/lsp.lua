@@ -70,14 +70,15 @@ return {
                 apex_enable_completion_statistics = false,
                 apex_jar_path = vim.env.HOME .. '/apex-jorje-lsp.jar',
                 filetypes = { 'apex' },
-                root_dir = lspconfig.util.root_pattern('sfdx-project.json'),
             }
         )
+        vim.lsp.enable('apex_ls')
         vim.lsp.config('nil_ls',
             {
                 filetypes = {'nix'}
             }
         )
+        vim.lsp.enable('nil_ls')
         vim.api.nvim_create_autocmd("LspAttach", {
          callback = function(args)
          local bufnr = args.buf

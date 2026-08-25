@@ -1,7 +1,5 @@
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.6',
-    -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
 
     config = function ()
@@ -20,7 +18,7 @@ return {
         end, {desc = 'Edit neovim config'})
         vim.keymap.set('n', '<leader>edf', function ()
             builtin.find_files({
-                cwd = '$HOME/dotfiles',
+                cwd = vim.fn.expand('~/dotfiles'),
                 follow  = true,
                 hidden = true,
             })

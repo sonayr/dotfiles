@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 source $ZDOTDIR/.zsh_salesforceShellCmds
 source $ZDOTDIR/.zsh_defaults
 source $ZDOTDIR/.zsh_gitCmds
+source $ZDOTDIR/.zsh_exports
 
 alias python=python3
 alias pip=pip3

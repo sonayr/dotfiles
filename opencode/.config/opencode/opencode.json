@@ -10,7 +10,15 @@
     "mcp": {
         "atlassian": {
           "type": "local",
-          "command": ["npx","-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"],
+          "command": ["uvx", "mcp-atlassian"],
+          "environment": {
+            "JIRA_URL": "https://nestoca.atlassian.net",
+            "JIRA_USERNAME": "ryan@nesto.ca",
+            "JIRA_API_TOKEN": "{env:JIRA_API_KEY}",
+            "CONFLUENCE_URL": "https://nestoca.atlassian.net/wiki",
+            "CONFLUENCE_USERNAME": "ryan@nesto.ca",
+            "CONFLUENCE_API_TOKEN": "{env:JIRA_API_KEY}"
+          },
           "enabled": true
         },
 
@@ -25,7 +33,11 @@
         },
         "granola": {
            "type": "local",
-           "command": ["uvx","granola-mcp-server"]
+           "command": ["npx", "-y", "granola-simple-mcp"],
+           "environment": {
+             "GRANOLA_API_KEY": "{env:GRANOLA_API_KEY}"
+           },
+           "enabled": true
         },
         "obsidian": {
           "type": "local",
@@ -33,7 +45,7 @@
         }
   },
   "permission": { "skill": {
-      "*": "ask",
+      "*": "ask"
     }
   }
 }

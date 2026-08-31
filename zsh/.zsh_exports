@@ -1,1 +1,2 @@
-export GRANOLA_API_KEY=""
+# General / non-sensitive environment variables
+# Note: Put sensitive tokens/API keys into ~/.zsh_secrets (or sync via `sync-secrets`)

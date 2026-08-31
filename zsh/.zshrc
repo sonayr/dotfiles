@@ -18,6 +18,7 @@ source $ZDOTDIR/.zsh_salesforceShellCmds
 source $ZDOTDIR/.zsh_defaults
 source $ZDOTDIR/.zsh_gitCmds
 source $ZDOTDIR/.zsh_exports
+[[ -f "$ZDOTDIR/.zsh_secrets" ]] && source "$ZDOTDIR/.zsh_secrets"
 
 alias python=python3
 alias pip=pip3

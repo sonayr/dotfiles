@@ -20,6 +20,8 @@ brew "go"
 brew "gopls"
 # Feature-rich interactive Jira CLI
 brew "jira-cli"
+# Command-line interface for LastPass
+brew "lastpass-cli"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes controller and tool for one-way encrypted Secrets

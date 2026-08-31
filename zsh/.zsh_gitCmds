@@ -8,8 +8,7 @@ function addWT (){
     tmux new-window -n $newpath -c $(realpath $newpath)
     tmux send-keys 'git pull origin master && clear' c-M
     tmux send-keys 'sf project tracking reset -p' c-M
-    opencode --agent "plan" --prompt "Take a look a the jira ticket assoicated to this branch (ticket key should be in the branch name, if not prompt me for it). Based on the ticket description and details (any comments), suggest a path forward to build out or execute for this ticket"
-    
+    tmux send-keys 'opencode --agent "plan" --prompt "Take a look a the jira ticket assoicated to this branch (ticket key should be in the branch name, if not prompt me for it). Based on the ticket description and details (any comments), suggest a path forward to build out or execute for this ticket"' c-M
 }
 
 

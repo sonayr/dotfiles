@@ -6,3 +6,8 @@ spell/
 lazy-lock.json
 .zcompdump*
 AGENTS.MD
+
+# Local secrets & overrides
+.zsh_secrets
+.zsh_secrets*
+!.zsh_secrets.example

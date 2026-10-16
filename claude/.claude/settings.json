@@ -1,4 +1,10 @@
 {
+  "model": "opus",
+  "effortLevel": "high",
   "theme": "dark",
-  "effortLevel": "high"
+  "permissions": {
+    "additionalDirectories": [
+      "~/Workspaces/brain"
+    ]
+  }
 }
